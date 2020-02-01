@@ -37,3 +37,7 @@ deselect_rstudio_range <- function(context) {
     rng <- rstudioapi::document_range(pos, end = pos)
     rstudioapi::setSelectionRanges(ranges = rng, id = context$id)
 }
+
+null_to_str <- function(x) {
+  ifelse(is.null(x), "", x)
+}
